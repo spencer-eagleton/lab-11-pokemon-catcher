@@ -23,7 +23,7 @@ test('shownPokemon should add 1 to quantity if item is in the cart', (expect)=>{
     ];
 
     localStorage.setItem('POKEMON', JSON.stringify(fakeResults));
-    shownPokemon('2');
+    
 
 
     const results = getResults();
@@ -31,6 +31,6 @@ test('shownPokemon should add 1 to quantity if item is in the cart', (expect)=>{
         { id: '2', shown: 6 }
     ];
     shownPokemon('2');
-    
+
     expect.deepEqual(results, expected);
 });
