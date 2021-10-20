@@ -1,18 +1,36 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-
+import { getResults, shownPokemon } from '../utils.js';
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+test('getResults should return results', (expect)=>{
+    const fakeResults = [
+        { id: '2', picked: 4, shown: 4 },
+        { id: '4', picked: 4, shown: 5 }
+
+    ];
+    localStorage.setItem('POKEMON', JSON.stringify(fakeResults));
+    const actual = getResults();
+    expect.deepEqual(actual, fakeResults);
+});
+
+test('shownPokemon should add 1 to quantity if item is in the cart', (expect)=>{
+
+    const fakeResults = [
+        { id: '2', shown: 5 }
+        
+    ];
+
+    localStorage.setItem('POKEMON', JSON.stringify(fakeResults));
+    shownPokemon('2');
+
+
+    const results = getResults();
+    const expected = [
+        { id: '2', shown: 6 }
+    ];
+    shownPokemon('2');
+    
+    expect.deepEqual(results, expected);
 });
