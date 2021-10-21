@@ -1,9 +1,9 @@
-// import { pokemon } from './pokemon.js';
-// console.log(pokemon);
+import { pokemons } from './pokemon.js';
 
+console.log(pokemons)
 // const generatePokemon = () =>{
 
-//   // generate 3 random pokemon
+// //   // generate 3 random pokemon
 //     let randNum1 = Math.floor(Math.random() * pokemon.length);
 //     let randNum2 = Math.floor(Math.random() * pokemon.length);
 //     let randNum3 = Math.floor(Math.random() * pokemon.length);
@@ -27,11 +27,16 @@
 //      let pokemon3 = pokemon[randNum3];
 //      pokemon3Img.src = pokemon3.image;
 
-//
-//
+
+
 //   // call showPokemon for each
 //   // render pokemon to page
 
 
 // };
 // generatePokemon();
+
+// button.addEventListener('click', ()=>{
+
+
+// });
