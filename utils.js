@@ -30,15 +30,15 @@ export function chosenPokemon(id){
 export function shownPokemon(id){
     const currentResults = getPokedex();
     const pokemonShown = currentResults.find(pokemon => pokemon.id === id);
-    if (shownPokemon){
-        shownPokemon.shown ++;
+    if (pokemonShown){
+        pokemonShown.shown++;
     } else {
         const newPokemon = { 'id': id, 'shown': 1 };
         currentResults.push(newPokemon);
     }
 
     
-    pokemonShown.shown ++;
+
   
     setPokedex(currentResults);
     

@@ -9,7 +9,7 @@ const pokemon1Img = document.getElementById('pokemon-1-image');
 const pokemon2Img = document.getElementById('pokemon-2-image');
 const pokemon3Img = document.getElementById('pokemon-3-image');
 
-
+const chooseButton = document.getElementById('choose-button');
 
 
 
@@ -33,15 +33,22 @@ const generatePokemon = () =>{
         randNum2 = Math.floor(Math.random() * pokemons.length);
         randNum3 = Math.floor(Math.random() * pokemons.length);
     }
-    let pokemon1 = pokemons[randNum1];
     
+    
+    let pokemon1 = pokemons[randNum1];
+    shownPokemon(pokemon1.id);
     pokemon1Img.src = pokemon1.url_image;
+    pokemon1Button.value = pokemon1.id;
 
     let pokemon2 = pokemons[randNum2];
+    shownPokemon(pokemon2.shown);
     pokemon2Img.src = pokemon2.url_image;
+    pokemon2Button.value = pokemon2.id;
 
     let pokemon3 = pokemons[randNum3];
+    shownPokemon(pokemon3.shown);
     pokemon3Img.src = pokemon3.url_image;
+    pokemon3Button.value = pokemon3.id;
 
 
 
@@ -54,7 +61,7 @@ const generatePokemon = () =>{
 
 generatePokemon();
 
-// button.addEventListener('click', ()=>{
+chooseButton.addEventListener('click', ()=>{
 
 
-// });
+});
