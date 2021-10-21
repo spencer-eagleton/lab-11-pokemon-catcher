@@ -1,3 +1,10 @@
+export function findById(items, id){
+    for (const item of items){
+        if (item.id === item){
+            return item;
+        }
+    }
+}
 export function getPokedex(){
     const resultsString = localStorage.getItem('POKEMON') || '[]';
     const results = JSON.parse(resultsString);
