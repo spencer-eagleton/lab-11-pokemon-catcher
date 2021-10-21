@@ -41,12 +41,12 @@ const generatePokemon = () =>{
     pokemon1Button.value = pokemon1.id;
 
     let pokemon2 = pokemons[randNum2];
-    shownPokemon(pokemon2.shown);
+    shownPokemon(pokemon2.id);
     pokemon2Img.src = pokemon2.url_image;
     pokemon2Button.value = pokemon2.id;
 
     let pokemon3 = pokemons[randNum3];
-    shownPokemon(pokemon3.shown);
+    shownPokemon(pokemon3.id);
     pokemon3Img.src = pokemon3.url_image;
     pokemon3Button.value = pokemon3.id;
 
