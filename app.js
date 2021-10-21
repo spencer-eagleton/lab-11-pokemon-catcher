@@ -1,12 +1,27 @@
 import { pokemons } from './pokemon.js';
+import { shownPokemon } from './utils.js';
 
-console.log(pokemons)
-// const generatePokemon = () =>{
+const pokemon1Button = document.getElementById('pokemon-1-button');
+const pokemon2Button = document.getElementById('pokemon-2-button');
+const pokemon3Button = document.getElementById('pokemon-3-button');
+
+const pokemon1Img = document.getElementById('pokemon-1-image');
+const pokemon2Img = document.getElementById('pokemon-2-image');
+const pokemon3Img = document.getElementById('pokemon-3-image');
+
+
+
+
+
+
+
+
+const generatePokemon = () =>{
 
 // //   // generate 3 random pokemon
-//     let randNum1 = Math.floor(Math.random() * pokemon.length);
-//     let randNum2 = Math.floor(Math.random() * pokemon.length);
-//     let randNum3 = Math.floor(Math.random() * pokemon.length);
+    let randNum1 = Math.floor(Math.random() * pokemons.length);
+    let randNum2 = Math.floor(Math.random() * pokemons.length);
+    let randNum3 = Math.floor(Math.random() * pokemons.length);
 
 
 //   // regenerate number if they match
@@ -18,14 +33,15 @@ console.log(pokemons)
 //         randNum2 = Math.floor(Math.random() * pokemon.length);
 //         randNum3 = Math.floor(Math.random() * pokemon.length);
 //     }
-//      let pokemon1 = pokemon[randNum1];
-//      pokemon1Img.src = pokemon1.image;
+    let pokemon1 = pokemons[randNum1];
+    
+    pokemon1Img.src = pokemon1.url_image;
 
-//      let pokemon2 = pokemon[randNum2];
-//      pokemon2Img.src = pokemon2.image;
+    let pokemon2 = pokemons[randNum2];
+    pokemon2Img.src = pokemon2.url_image;
 
-//      let pokemon3 = pokemon[randNum3];
-//      pokemon3Img.src = pokemon3.image;
+    let pokemon3 = pokemons[randNum3];
+    pokemon3Img.src = pokemon3.url_image;
 
 
 
@@ -33,8 +49,10 @@ console.log(pokemons)
 //   // render pokemon to page
 
 
-// };
-// generatePokemon();
+};
+
+
+generatePokemon();
 
 // button.addEventListener('click', ()=>{
 
