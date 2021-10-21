@@ -4,18 +4,19 @@ export function getResults(){
     return results;
 }
 
-export function shownPokemon(id){
+export function setResults(pokemon){
+    const chosenString = JSON.stringify(pokemon);
+    localStorage.setItem('POKEMON', chosenString);
+}
+
+export function chosenPokemon(id){
     const currentResults = getResults();
-    const pokemonShown = currentResults.find(pokemon => pokemon.id === id
+    const pokemonChosen = currentResults.find(pokemon => pokemon.id === id
 
     );
-    console.log(pokemonShown)
-    pokemonShown.shown ++;
- 
-    const shownString = JSON.stringify(currentResults);
-    localStorage.setItem('POKEMON', shownString);
-    console.log(shownString);
+    console.log(pokemonChosen)
+    pokemonChosen.chosen ++;
+    console.log(pokemonChosen)
+    setResults(currentResults);
     
-    
-    console.log(pokemonShown);
 }

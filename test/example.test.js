@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { getResults, shownPokemon } from '../utils.js';
+import { getResults, chosenPokemon } from '../utils.js';
 const test = QUnit.test;
 
 
@@ -15,10 +15,10 @@ test('getResults should return results', (expect)=>{
     expect.deepEqual(actual, fakeResults);
 });
 
-test('shownPokemon should add 1 to quantity if item is in the cart', (expect)=>{
+test('chosenPokemon should add 1 to quantity if item is in the cart', (expect)=>{
 
     const fakeResults = [
-        { id: '2', shown: 5 }
+        { id: '2', chosen: 5 }
         
     ];
 
@@ -26,11 +26,11 @@ test('shownPokemon should add 1 to quantity if item is in the cart', (expect)=>{
     
 
 
-    const results = getResults();
+    
     const expected = [
-        { id: '2', shown: 6 }
+        { id: '2', chosen: 6 }
     ];
-    shownPokemon('2');
-
+    chosenPokemon('2');
+    const results = getResults();
     expect.deepEqual(results, expected);
 });
