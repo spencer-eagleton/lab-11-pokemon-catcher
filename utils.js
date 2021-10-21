@@ -20,9 +20,9 @@ export function chosenPokemon(id){
     }
 
     
-    console.log(pokemonChosen)
+    
     pokemonChosen.chosen ++;
-    console.log(pokemonChosen)
+    
     setPokedex(currentResults);
     
 }
@@ -38,9 +38,8 @@ export function shownPokemon(id){
     }
 
     
-    console.log(pokemonShown)
     pokemonShown.shown ++;
-    console.log(pokemonShown)
+  
     setPokedex(currentResults);
     
 }
