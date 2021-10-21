@@ -9,31 +9,13 @@ export function setPokedex(pokemon){
     localStorage.setItem('POKEMON', chosenString);
 }
 
-export function chosenPokemon(id){
-    const currentResults = getPokedex();
-    const pokemonChosen = currentResults.find(pokemon => pokemon.id === id);
-    if (chosenPokemon){
-        chosenPokemon.chosen ++;
-    } else {
-        const newPokemon = { 'id': id, 'chosen': 1 };
-        currentResults.push(newPokemon);
-    }
-
-    
-    
-    pokemonChosen.chosen ++;
-    
-    setPokedex(currentResults);
-    
-}
-
 export function shownPokemon(id){
     const currentResults = getPokedex();
     const pokemonShown = currentResults.find(pokemon => pokemon.id === id);
     if (pokemonShown){
         pokemonShown.shown++;
     } else {
-        const newPokemon = { 'id': id, 'shown': 1 };
+        const newPokemon = { 'id': id, 'shown': 1, 'chosen': 0 };
         currentResults.push(newPokemon);
     }
 
@@ -43,3 +25,18 @@ export function shownPokemon(id){
     setPokedex(currentResults);
     
 }
+
+export function chosenPokemon(id){
+    const currentResults = getPokedex();
+    const pokemonChosen = currentResults.find(pokemon => pokemon.id === id);
+   
+    pokemonChosen.chosen ++;
+   
+    
+    
+    
+    
+    setPokedex(currentResults);
+    
+}
+

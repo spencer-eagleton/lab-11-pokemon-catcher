@@ -1,5 +1,5 @@
 import { pokemons } from './pokemon.js';
-import { shownPokemon } from './utils.js';
+import { chosenPokemon, shownPokemon } from './utils.js';
 
 const pokemon1Button = document.getElementById('pokemon-1-button');
 const pokemon2Button = document.getElementById('pokemon-2-button');
@@ -62,6 +62,13 @@ const generatePokemon = () =>{
 generatePokemon();
 
 chooseButton.addEventListener('click', ()=>{
+    const chosenButton = document.querySelector('input[type=radio]:checked');
 
-
+    if (chosenButton){
+        const chosenId = Number(chosenButton.value);
+        
+        chosenPokemon(chosenId);
+    } else {
+        generatePokemon();
+    }
 });
