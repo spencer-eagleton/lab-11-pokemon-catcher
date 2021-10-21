@@ -24,15 +24,15 @@ const generatePokemon = () =>{
     let randNum3 = Math.floor(Math.random() * pokemons.length);
 
 
-//   // regenerate number if they match
-//     while (randNum1 === randNum2 ||
-//       randNum1 === randNum3 ||
-//       randNum2 === randNum3
-//     ) { 
-//         randNum1 = Math.floor(Math.random() * pokemon.length);
-//         randNum2 = Math.floor(Math.random() * pokemon.length);
-//         randNum3 = Math.floor(Math.random() * pokemon.length);
-//     }
+  // regenerate number if they match
+    while (randNum1 === randNum2 ||
+      randNum1 === randNum3 ||
+      randNum2 === randNum3
+    ) { 
+        randNum1 = Math.floor(Math.random() * pokemons.length);
+        randNum2 = Math.floor(Math.random() * pokemons.length);
+        randNum3 = Math.floor(Math.random() * pokemons.length);
+    }
     let pokemon1 = pokemons[randNum1];
     
     pokemon1Img.src = pokemon1.url_image;
