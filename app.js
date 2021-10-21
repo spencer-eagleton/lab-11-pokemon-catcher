@@ -11,7 +11,7 @@ const pokemon3Img = document.getElementById('pokemon-3-image');
 
 const chooseButton = document.getElementById('choose-button');
 
-
+const throwsSpan = document.getElementById('total-throws');
 
 
 
@@ -58,6 +58,7 @@ const generatePokemon = () =>{
 
 };
 
+let totalThrows = 0;
 
 generatePokemon();
 
@@ -67,8 +68,15 @@ chooseButton.addEventListener('click', ()=>{
     if (chosenButton){
         const chosenId = Number(chosenButton.value);
         
+        
+        totalThrows++;
+        throwsSpan.textContent = totalThrows;
+        
         chosenPokemon(chosenId);
-    } else {
-        generatePokemon();
+        if (totalThrows >= 10){
+            window.location = './results/index.html';
+        } else {
+            generatePokemon();
+        }
     }
 });
