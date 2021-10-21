@@ -4,7 +4,7 @@ export function getPokedex(){
     return results;
 }
 
-export function setResults(pokemon){
+export function setPokedex(pokemon){
     const chosenString = JSON.stringify(pokemon);
     localStorage.setItem('POKEMON', chosenString);
 }
@@ -23,7 +23,7 @@ export function chosenPokemon(id){
     console.log(pokemonChosen)
     pokemonChosen.chosen ++;
     console.log(pokemonChosen)
-    setResults(currentResults);
+    setPokedex(currentResults);
     
 }
 
@@ -41,6 +41,6 @@ export function shownPokemon(id){
     console.log(pokemonShown)
     pokemonShown.shown ++;
     console.log(pokemonShown)
-    setResults(currentResults);
+    setPokedex(currentResults);
     
 }
