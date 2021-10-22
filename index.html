@@ -11,28 +11,33 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>POKE-CATCHER</title>
 </head>
 
 <body>
     <main>
         <section id="main-section">
             <h2>Pokemon Catcher</h2>
-
-            <label class="selections">
-                <input class="hidden" type="radio" name="choices" id="Rock" value="rock"><img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png" alt="rock" width="200px">
-            </label>    
-            <label class="selections">
-                    <input class="hidden" type="radio" name="choices" id="Paper" value="paper"><img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png" alt="paper" width="200px">
-            </label>    
-            <label class="selections">
-                    <input class="hidden" type="radio" name="choices" id="Scissors" value="scissors"><img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" alt="scissors" width="200px">
-            </label>
-
+                <div class="pokemon-choice">
+                    <label class="selections">
+                        <input class="hidden" type="radio" id="pokemon-1-button" name="selections">
+                        <img id="pokemon-1-image"src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png" alt="rock" width="200px">
+                    </label>    
+                    <label class="selections">
+                            <input class="hidden" type="radio" id="pokemon-2-button"  name="selections">
+                            <img id="pokemon-2-image"src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png" alt="paper" width="200px">
+                    </label>    
+                    <label class="selections">
+                            <input class="hidden" type="radio" id="pokemon-3-button"  name="selections">
+                            <img id="pokemon-3-image" src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" alt="scissors" width="200px">
+                    </label>
+                </div>
 
         </section>
 
         <button id="choose-button">I choose you!</button>
+        <section>
+            Total Throws: <span id="total-throws"></span>
         <section>
             <a href="./results/index.html">Pokedex</a>
         </section>
