@@ -11,13 +11,25 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <title>POKE-CATCHER</title>
 </head>
 
 <body>
+    <header>
+        <section id="header-div">
+            <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/211022/dc08e797a7ff2fbeede142f9b45f9573.png" alt="pokemon-font" border="0"></a>
+        </section>
+    </header>  
     <main>
+      
+        <section>
+            TOTAL CATCHES: <span id="total-throws"></span>
+        <section>
         <section id="main-section">
-            <h2>Pokemon Catcher</h2>
+            
                 <div class="pokemon-choice">
                     <label class="selections">
                         <input class="hidden" type="radio" id="pokemon-1-button" name="selections">
@@ -33,12 +45,10 @@
                     </label>
                 </div>
 
-        </section>
+        </section id="bottom">
 
         <button id="choose-button">I choose you!</button>
-        <section>
-            Total Throws: <span id="total-throws"></span>
-        <section>
+        
             <a href="./results/index.html">Pokedex</a>
         </section>
     
@@ -47,7 +57,7 @@
 
     </main>
    
-
+<audio id="cry" src="./assets/charmander.mp3" autoplay></audio>
     <script type="module" src="./app.js"></script>
 </body>
 

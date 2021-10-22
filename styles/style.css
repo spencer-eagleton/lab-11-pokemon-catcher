@@ -1,0 +1,58 @@
+body {
+
+    
+     background-image: url(https://vignette.wikia.nocookie.net/fantendo/images/5/51/Pok%C3%A9mon_Stadium_2.jpg/revision/latest?cb=20141221100214);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+    position:fixed;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(69, 88, 70);
+}
+main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 90px;
+        justify-content: center;
+    }
+.hidden {
+    display: none;
+}
+
+input[type=radio]:checked + img {
+    /* box-shadow: 0px 0px 20px 20px rgb(255, 243, 193);
+    border-radius: 50%; */
+    -webkit-filter: drop-shadow(0px 0px 10px #a0bda1);
+        filter: drop-shadow(0px 0px 10px #ffffff);
+}
+
+input[type=radio]:hover + img {
+    animation: bounce 0.5s infinite alternate;
+}
+
+
+@keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-20px); } }
+
+section {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+header  {
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -15%;
+}
+
+button {
+    margin: 20px;
+}
+
