@@ -13,6 +13,7 @@ const chooseButton = document.getElementById('choose-button');
 
 const throwsSpan = document.getElementById('total-throws');
 
+const cry = document.getElementById('cry');
 
 
 
@@ -61,6 +62,7 @@ const generatePokemon = () =>{
 let totalThrows = 0;
 
 generatePokemon();
+cry.play();
 
 chooseButton.addEventListener('click', ()=>{
     const chosenButton = document.querySelector('input[type=radio]:checked');
@@ -77,6 +79,7 @@ chooseButton.addEventListener('click', ()=>{
             window.location = './results/index.html';
         } else {
             generatePokemon();
+            cry.play();
         }
     }
 });
