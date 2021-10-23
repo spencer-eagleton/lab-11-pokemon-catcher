@@ -41,5 +41,15 @@ div {
 }
 
 #back {
-    margin: 40px;
+    margin: 30px;
+}
+
+.chart {
+    width: 500px;
+    margin: auto;
+    background-color: rgb(110, 117, 110);
+    border:  5px inset;
+    border-radius: 15px 15px 15px 100px;
+    padding: 20px;
+
 }

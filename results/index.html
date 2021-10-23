@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">    <title>Pokedex</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script> 
 </head>
 <body>
     <main>
@@ -25,7 +26,13 @@
     <section id="back">
         <a href="../index.html">Back!</a>
     </section>
+
+   
 </main>
+
+    <section class="chart">
+        <canvas id="resultsChart" width="400" height="400"></canvas>
+    </section>
 <audio src="../assets/53 Stadium Battle End.mp3"></audio>
 <script type="module" src="./results.js"></script>
 </body>

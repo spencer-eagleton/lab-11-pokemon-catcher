@@ -2,7 +2,9 @@ import { getPokedex, findById } from '../utils.js';
 import { pokemons } from '../pokemon.js';
 const results = getPokedex();
 
+
 const main = document.getElementById('main');
+
 
 for (let item of results){
     const pokemon = findById(pokemons, item.id);
@@ -34,3 +36,40 @@ for (let item of results){
 }
 
 
+const names = results.map((item)=>{
+    const pokemon = findById(pokemons, item.id);
+    return pokemon.pokemon;
+});
+const picked = results.map((item)=>{
+    return item.chosen;
+});
+
+var ctx = document.getElementById('resultsChart').getContext('2d');
+
+// eslint-disable-next-line no-undef
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: names,
+        datasets: [{
+            label: '# of Catches',
+            data: picked,
+            backgroundColor: [
+                'rgba(0, 0, 0, 0.2)',
+                
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 0.5)',
+
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
