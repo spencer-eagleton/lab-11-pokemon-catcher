@@ -5,7 +5,6 @@ const results = getPokedex();
 
 const main = document.getElementById('main');
 
-
 for (let item of results){
     const pokemon = findById(pokemons, item.id);
     
